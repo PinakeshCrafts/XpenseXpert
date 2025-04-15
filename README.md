@@ -3,6 +3,11 @@
 
 A full-stack expense tracker web application built using **MongoDB**, **Express.js**, **React**, and **Node.js**, featuring **JWT authentication**, user-friendly dashboards, income/expense tracking, and graphical analysis.
 
+![image](https://github.com/user-attachments/assets/e979b0cb-a026-42be-b1ff-4d83fabb94eb)
+![image](https://github.com/user-attachments/assets/2923c48a-3185-4d4b-83df-845e071eeca7)
+
+
+
 ## 🚀 Features
 
 - 🔐 User Authentication (Signup/Login) using JWT
