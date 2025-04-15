@@ -48,8 +48,8 @@ root
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/expense-tracker.git
-cd expense-tracker
+git clone https://github.com/PinakeshCrafts/XpenseXpert.git
+cd XpenseXpert
 ```
 
 2. **Setup Backend**
@@ -114,7 +114,3 @@ Visual representation of user's expenses vs income using `Chart.js`, updated in 
 - Add categories/tags to transactions
 - Mobile responsive UI
 
----
-
-
-Let me know if you'd like me to generate a version with your GitHub username, add badges (build, license, etc.), or prepare a `LICENSE` file.
