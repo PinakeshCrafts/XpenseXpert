@@ -1,5 +1,5 @@
 
-# 💸 Expense Tracker Web App
+# 💸XpenseXpert: Expense Tracker Web App
 
 A full-stack expense tracker web application built using **MongoDB**, **Express.js**, **React**, and **Node.js**, featuring **JWT authentication**, user-friendly dashboards, income/expense tracking, and graphical analysis.
 
@@ -91,13 +91,6 @@ npm start
 
 ---
 
-## 📷 Screenshots
-
-| Login Page | Dashboard |
-|------------|-----------|
-| ![login](screenshots/login.png) | ![dashboard](screenshots/dashboard.png) |
-
----
 
 ## 🔒 Authentication Flow
 
