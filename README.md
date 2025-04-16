@@ -1,7 +1,7 @@
 
 # 💸XpenseXpert: Expense Tracker Web App
 
-Deployed link: https://xpense-xpert-2f5z.onrender.com/login
+Deployed link: https://xpense-xpert-2f5z.onrender.com
 
 A full-stack expense tracker web application built using **MongoDB**, **Express.js**, **React**, and **Node.js**, featuring **JWT authentication**, user-friendly dashboards, income/expense tracking, and graphical analysis.
 
