@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import { handleError, handleSuccess } from '../utils';
+import './signup.css';
 
 function Signup() {
 
@@ -54,45 +55,51 @@ function Signup() {
         }
     }
     return (
-        <div className='container'>
-            <h1>Signup</h1>
-            <form onSubmit={handleSignup}>
-                <div>
-                    <label htmlFor='name'>Name</label>
-                    <input
-                        onChange={handleChange}
-                        type='text'
-                        name='name'
-                        autoFocus
-                        placeholder='Enter your name...'
-                        value={signupInfo.name}
-                    />
+        <div className='signup-container'>
+            <div className='signup-card'>
+                <h1 className='signup-title'>Create Account</h1>
+                <form onSubmit={handleSignup} className='signup-form'>
+                    <div className='form-group'>
+                        <label htmlFor='name'>Full Name</label>
+                        <input
+                            onChange={handleChange}
+                            type='text'
+                            id='name'
+                            name='name'
+                            autoFocus
+                            placeholder='Your full name'
+                            value={signupInfo.name}
+                        />
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='email'>Email</label>
+                        <input
+                            onChange={handleChange}
+                            type='email'
+                            id='email'
+                            name='email'
+                            placeholder='you@example.com'
+                            value={signupInfo.email}
+                        />
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='password'>Password</label>
+                        <input
+                            onChange={handleChange}
+                            type='password'
+                            id='password'
+                            name='password'
+                            placeholder='Min. 6 characters'
+                            value={signupInfo.password}
+                        />
+                    </div>
+                    <button type='submit' className='signup-button'>Create Account</button>
+                </form>
+                <div className='login-link'>
+                    Already have an account? 
+                    <Link to="/login"> Sign in</Link>
                 </div>
-                <div>
-                    <label htmlFor='email'>Email</label>
-                    <input
-                        onChange={handleChange}
-                        type='email'
-                        name='email'
-                        placeholder='Enter your email...'
-                        value={signupInfo.email}
-                    />
-                </div>
-                <div>
-                    <label htmlFor='password'>Password</label>
-                    <input
-                        onChange={handleChange}
-                        type='password'
-                        name='password'
-                        placeholder='Enter your password...'
-                        value={signupInfo.password}
-                    />
-                </div>
-                <button type='submit'>Signup</button>
-                <span>Already have an account ?
-                    <Link to="/login">Login</Link>
-                </span>
-            </form>
+            </div>
             <ToastContainer />
         </div>
     )

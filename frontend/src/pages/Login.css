@@ -14,90 +14,96 @@
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    padding: 2rem;
+    padding: 3rem 2rem;
   }
   
   .login-form-wrapper {
-    max-width: 400px;
+    max-width: 380px;
     width: 100%;
   }
   
   .login-title {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
+    text-align: left;
+    margin-bottom: 32px;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
   }
   
   /* Form styles */
   .login-form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 20px;
   }
   
   .form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 8px;
   }
   
   .form-label {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 500;
-    color: #4b5563;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
   }
   
   .form-input {
     width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.375rem;
-    font-size: 1rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
+    padding: 12px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s;
+    background-color: #fafbfc;
   }
   
   .form-input:focus {
     outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    border-color: #6b7cff;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(107, 124, 255, 0.1);
   }
   
   .login-button {
-    background-color: #2563eb;
+    background-color: #6b7cff;
     color: white;
     font-weight: 500;
-    padding: 0.75rem 1rem;
-    border-radius: 0.375rem;
+    padding: 12px 16px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
-    transition: background-color 0.2s;
-    margin-top: 0.5rem;
+    transition: all 0.2s;
+    margin-top: 8px;
+    font-size: 15px;
   }
   
   .login-button:hover {
-    background-color: #1d4ed8;
+    background-color: #5a68f5;
+    box-shadow: 0 2px 8px rgba(107, 124, 255, 0.3);
   }
   
-  .login-button:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  .login-button:active {
+    transform: translateY(0.5px);
   }
   
   /* Signup link */
   .signup-link-container {
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 8px;
   }
   
   .signup-text {
-    font-size: 0.875rem;
-    color: #6b7280;
+    font-size: 14px;
+    color: #999;
   }
   
   .signup-link {
-    color: #2563eb;
+    color: #6b7cff;
     text-decoration: none;
     font-weight: 500;
   }
@@ -109,36 +115,57 @@
   /* Right side - Image container */
   .login-image-container {
     width: 50%;
-    background-color: #2563eb;
+    background: linear-gradient(135deg, #6b7cff 0%, #5a68f5 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+  
+  .login-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)" /></svg>');
+    opacity: 0.5;
   }
   
   .image-content {
     text-align: center;
-    padding: 2rem;
+    padding: 3rem;
     max-width: 500px;
+    position: relative;
+    z-index: 10;
   }
   
   .login-image {
     max-width: 100%;
     height: auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+  }
+  
+  .login-image:hover {
+    transform: translateY(-8px);
   }
   
   .welcome-title {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 700;
     color: white;
-    margin-top: 2rem;
+    margin-top: 28px;
+    letter-spacing: -0.3px;
   }
   
   .welcome-text {
-    color: white;
-    margin-top: 1rem;
-    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 12px;
+    line-height: 1.6;
+    font-size: 15px;
   }
   
   /* Responsive design */
@@ -155,9 +182,15 @@
     .login-image-container {
       order: -1;
       padding: 2rem;
+      height: 300px;
     }
     
     .login-form-container {
-      padding: 2rem 1rem;
+      padding: 2rem 1.5rem;
+    }
+    
+    .login-title {
+      font-size: 28px;
+      margin-bottom: 24px;
     }
   }
